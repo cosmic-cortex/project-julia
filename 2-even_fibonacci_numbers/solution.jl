@@ -1,18 +1,17 @@
-s = 0
-upper_limit = 4000000
-
-a, b = 0, 1
-
-while true
-    global a, b, s
-    a, b = b, b+a
-
-    if a % 2 == 1
-        s += a
+@time function even_fibonacci_numbers(upper_limit)
+    s = 0
+    a, b = 0, 1
+    while true
+        a, b = b, b+a
+        if a % 2 == 1
+            s += a
+        end
+        if b > upper_limit
+            break
+        end
     end
-    if b > upper_limit
-        break
-    end
+    return s
 end
 
-println(s)
+upper_limit = 4000000
+println(even_fibonacci_numbers(upper_limit))
