@@ -1,6 +1,6 @@
 function largest_prime_factor(n)
     for i=2:trunc(Int, sqrt(n))
-        n % i  == 0 && return largest_prime_factor(n ÷ i)        
+        n % i  == 0 && return largest_prime_factor(n ÷ i)
     end
     
     return n
