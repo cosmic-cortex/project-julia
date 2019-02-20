@@ -1,4 +1,4 @@
-@time function even_fibonacci_numbers(upper_limit)
+function even_fibonacci_numbers(upper_limit)
     s = 0
     a, b = 0, 1
     while true
@@ -14,4 +14,5 @@
 end
 
 upper_limit = 4000000
-println(even_fibonacci_numbers(upper_limit))
+@time sol = even_fibonacci_numbers(upper_limit)
+println(sol)
