@@ -1,7 +1,4 @@
-function collatz(n)
-   n % 2 == 0 && return n ÷ 2
-   return 3*n + 1
-end
+collatz(n) = n % 2 == 0 ? n ÷ 2 : 3*n + 1
 
 function cacher(func)
     cache = Dict()
@@ -17,11 +14,7 @@ function cacher(func)
     return cached_function
 end
 
-function find_chain_length(n)
-    n == 1 && return 1
-    return find_chain_length(collatz(n)) + 1
-end
-
+find_chain_length(n) = n == 1 ? 1 : find_chain_length(collatz(n)) + 1
 cached_chain_length = cacher(find_chain_length)
 
 function find_longest_chain(upper_limit)
