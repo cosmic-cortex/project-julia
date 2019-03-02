@@ -1,4 +1,4 @@
-const triangle = open("./triangle.txt") do f
+const triangle = open("./triangle_67.txt") do f
     lines = [[parse(Int, n) for n in split(l)] for l in readlines(f)]
     n_lines = length(lines)
     triangle = zeros(Int, (n_lines, n_lines))
